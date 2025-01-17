@@ -1,0 +1,25 @@
+nav{
+    display: flex;
+    justify-content :space-between;
+    align-items: center;
+    height: 60px;
+    background-color: hwb(288 88% 10%);
+    width: 100%;
+    padding:0 20px;
+}
+
+h1{
+    font-size: 30px;
+    font-weight: 500;
+    border: 1px solid white;
+    background-color: rgb(137, 184, 240);
+}
+
+input{
+    width: 500px;
+}
+
+.button-container{
+    margin-left: auto;
+    display: flex;
+}
