@@ -5,6 +5,7 @@ import { Route, Routes } from "react-router";
 import Layout from "./component/Layout";
 import "./App.scss";
 import { fetchPopularMovies } from "./api";
+import MovieList from "./component/MovieList";
 
 function App() {
   const [movies,setMovies] = useState([])
@@ -21,24 +22,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route element={<Layout />}>
-          <Route
-            path="/"
-            element={
-              <>
-                {movies.map((movie) => (
-                  <MovieCard
-                    id ={movie.id}
-                    key={movie.id}
-                    title={movie.title}
-                    vote_average={movie.vote_average}
-                    poster_path={movie.poster_path}
-                    
-                  />
-                ))}
-              </>
-            }
-            
-          />
+          <Route path="/" element={<MovieList/>}/>
           <Route path='/details/:id' element={<MovieDetail />} />
         </Route>
       </Routes>
