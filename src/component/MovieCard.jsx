@@ -2,11 +2,11 @@ import React from "react";
 import "./MovieCard.css"
 import { useNavigate } from "react-router-dom";
 
-const MovieCard = ({ vote_average, poster_path, title }) => {
+const MovieCard = ({id, vote_average, poster_path, title }) => {
   const navigate = useNavigate()
 
   const handleClick = () => {
-    navigate(`/details`)
+    navigate(`/details/${id}`)
   }
 
   const base = "https://image.tmdb.org/t/p/w500";
