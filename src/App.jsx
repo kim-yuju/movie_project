@@ -4,6 +4,7 @@ import { Route, Routes } from "react-router";
 import Layout from "./component/Layout";
 import "./App.scss";
 import MovieList from "./component/MovieList";
+import SearchPage from "./component/SearchPage";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route element={<Layout />}>
           <Route path="/" element={<MovieList />} />
+          <Route path="/search" element={<SearchPage />} />
           <Route path="/details/:id" element={<MovieDetail />} />
         </Route>
       </Routes>
