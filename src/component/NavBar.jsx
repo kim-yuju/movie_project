@@ -23,6 +23,14 @@ const NavBar = () => {
     setSearch("");
   };
 
+  const handleLoginClick = ()=>{
+    navigate('/login')
+  }
+
+  const handleJoinClick =()=>{
+    navigate('/join')
+  }
+
   return (
     <nav>
       <h1 onClick={handleClick}>Movie</h1>
@@ -33,8 +41,8 @@ const NavBar = () => {
         onChange={handelSearchChange}
       />
       <div className="button-container">
-        <button>로그인</button>
-        <button>회원가입</button>
+        <button onClick={handleLoginClick}>로그인</button>
+        <button onClick={handleJoinClick}>회원가입</button>
       </div>
     </nav>
   );
